@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Order, OrderStatus, getOrders } from "../api/order";
 import classNames from "classnames";
 import OptionIcon from "./icons/menu-icon";
 import Dropdown from "./dropdown";
@@ -7,6 +6,7 @@ import StatusDropdownItems, { StatusOption } from "./status-dropdown-item";
 import SortIcon from "./icons/sort-icon";
 import { SearchInput } from "./search-input";
 import Modal from "./modal";
+import { Order, OrderStatus } from "../types/index";
 
 const statusOptions: StatusOption[] = [
   { key: "Confirmed", text: "Confirmed" },
@@ -21,10 +21,14 @@ export default function Table() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [orderToEdit, setOrderToEdit] = useState<Order | null>(null);
 
-  useEffect(() => {
-    fetch("/db.json")
+  async function getOrders() {
+    return fetch("/db.json")
       .then((result) => result.json())
-      .then((data) => setOrders(data.orders));
+      .then((data) => data.orders);
+  }
+
+  useEffect(() => {
+    getOrders().then((orders) => setOrders(orders));
   }, []);
 
   useEffect(() => {
@@ -45,8 +49,8 @@ export default function Table() {
   }
 
   function filterByOrderStatus(status: OrderStatus) {
-    getOrders().then((result) => {
-      setOrders(result.unwrap().filter((order) => order.status === status));
+    getOrders().then((orders: Order[]) => {
+      setOrders(orders.filter((order) => order.status === status));
       setOrderStatus(status);
     });
   }
