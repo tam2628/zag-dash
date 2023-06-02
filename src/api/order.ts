@@ -1,6 +1,6 @@
 import { Err, Ok, Result } from "@sniptt/monads";
 
-const host = "http://localhost:3000";
+const host = "http://localhost:3001";
 
 export type OrderStatus =
   | "Confirmed"
