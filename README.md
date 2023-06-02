@@ -12,13 +12,13 @@ Install json-server
 npm install -g json-server
 ```
 
-Run the posts server
+Run the orders server
 
 ```bash
 npm run start-db
 ```
 
-this will start the server that serves the posts and comments on PORT `3001`
+this will start the server that serves the orders on PORT `3001`
 
 Run the project
 
