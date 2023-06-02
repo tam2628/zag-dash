@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar {
+  box-shadow: 10px 1px 9px -11px rgba(166, 166, 166, 1);
+  -webkit-box-shadow: 10px 1px 9px -11px rgba(166, 166, 166, 1);
+  -moz-box-shadow: 10px 1px 9px -11px rgba(166, 166, 166, 1);
+}
+
+thead.fixed-table-head th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #f3f3f3;
+  border-radius: 5px;
+}
