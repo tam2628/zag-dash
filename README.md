@@ -6,8 +6,7 @@ Install dependencies
 npm install
 ```
 
-
-Run the project
+Run the project ini dev mode
 
 ```
 npm run dev
