@@ -49,7 +49,7 @@ function App() {
               <span className="text-gray-400 ">21</span>
             </div>
             <div className="flex items-center justify-center w-10 h-10 bg-zag-gray-100 rounded-full">
-              <DashIcon />
+              <PlusIcon />
             </div>
           </div>
         </div>

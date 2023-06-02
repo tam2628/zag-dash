@@ -22,7 +22,9 @@ export default function Table() {
   const [orderToEdit, setOrderToEdit] = useState<Order | null>(null);
 
   useEffect(() => {
-    getOrders().then((result) => setOrders(result.unwrap()));
+    fetch("/db.json")
+      .then((result) => result.json())
+      .then((data) => setOrders(data.orders));
   }, []);
 
   useEffect(() => {
