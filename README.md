@@ -6,19 +6,6 @@ Install dependencies
 npm install
 ```
 
-Install json-server
-
-```bash
-npm install -g json-server
-```
-
-Run the orders server
-
-```bash
-npm run start-db
-```
-
-this will start the server that serves the orders on PORT `3001`
 
 Run the project
 
@@ -45,5 +32,3 @@ Run the project in production
 ```
 serve -s dist
 ```
-
-## make sure that the json server is running
