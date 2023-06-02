@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import DropdownItem from "./dropdown-item";
-import { OrderStatus } from "../api/order";
+import { OrderStatus } from "../types";
 
 export type StatusOption = {
   key: OrderStatus;

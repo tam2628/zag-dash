@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { Order } from "../api/order";
+import { Order } from "../types";
 
 type ModalProps = {
   isOpen?: boolean;
